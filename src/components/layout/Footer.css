@@ -1,0 +1,33 @@
+.footer {
+  border-top: var(--border-hairline);
+  padding: 40px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-ink);
+}
+
+.footer__logo span {
+  color: var(--color-gold);
+}
+
+.footer__note {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  color: var(--color-bronze);
+}
+
+@media (max-width: 720px) {
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 24px;
+    text-align: center;
+  }
+}
