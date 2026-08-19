@@ -1,0 +1,223 @@
+.page {
+  background: var(--color-paper);
+}
+ 
+/* ---------- Bio ---------- */
+ 
+.bioSection {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-12) 64px var(--space-8);
+}
+ 
+.bioGrid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+ 
+.portrait {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(160deg, var(--color-bronze) 0%, var(--color-ink) 75%);
+}
+ 
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+}
+ 
+.headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-h1);
+  color: var(--color-ink);
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+  max-width: 560px;
+}
+ 
+.bioText {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: var(--color-charcoal);
+  max-width: 620px;
+}
+ 
+.bioText + .bioText {
+  margin-top: var(--space-3);
+}
+ 
+/* ---------- Credentials strip ---------- */
+ 
+.credentialsStrip {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-4);
+  border-top: var(--border-hairline);
+}
+ 
+.credentialItem {
+  position: relative;
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  color: var(--color-bronze);
+  padding-left: var(--space-3);
+}
+ 
+.credentialItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+ 
+/* ---------- CAPACITY acronym strip ---------- */
+ 
+.acronymSection {
+  background: var(--color-ink);
+  padding: var(--space-8) 64px;
+}
+ 
+.acronymStrip {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-2);
+}
+ 
+.acronymLetter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 64px;
+}
+ 
+.acronymChar {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--color-gold);
+}
+ 
+.acronymWord {
+  margin-top: var(--space-1);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(250, 249, 246, 0.7);
+}
+ 
+/* ---------- Manifesto grid ---------- */
+ 
+.pillarSection {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-12) 64px;
+}
+ 
+.pillarHeading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-h2);
+  color: var(--color-ink);
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+ 
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+ 
+.pillarCard {
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+ 
+.pillarLetter {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-gold);
+  line-height: 1;
+}
+ 
+.pillarWord {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-ink);
+  margin-top: var(--space-1);
+}
+ 
+.pillarLine {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--color-charcoal);
+  margin-top: var(--space-1);
+}
+ 
+/* ---------- Responsive ---------- */
+ 
+@media (max-width: 900px) {
+  .bioGrid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .portrait {
+    max-width: 280px;
+  }
+ 
+  .pillarGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (max-width: 720px) {
+  .bioSection,
+  .acronymSection,
+  .pillarSection {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+ 
+  .pillarGrid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .acronymStrip {
+    justify-content: center;
+  }
+ 
+  .acronymChar {
+    font-size: 36px;
+  }
+}

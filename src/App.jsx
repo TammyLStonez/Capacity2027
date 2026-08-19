@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes/AppRoutes';
 import './styles/fonts.css';
 import './styles/global.css';
-import Home from './pages/public/Home';
+import Hero from './pages/public/Hero/Hero';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 
