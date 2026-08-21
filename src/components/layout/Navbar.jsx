@@ -10,7 +10,6 @@ export default function Navbar() {
 
       <ul className="navbar__links">
         <li><Link to="/about">About</Link></li>
-        <li><Link to="/manifesto">Manifesto</Link></li>
         <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/join">Join</Link></li>
       </ul>

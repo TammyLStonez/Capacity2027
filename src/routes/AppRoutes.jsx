@@ -3,9 +3,9 @@ import Layout from '../components/layout/Layout';
 import Hero from '../pages/public/Hero/Hero';
 import About from '../pages/public/About/About';
 import Blog from '../pages/public/Blog/Blog';
-import BlogPost from '../pages/public/BlogPost';
-import Donate from '../pages/public/Donate';
-import Join from '../pages/public/Join';
+import BlogPost from '../pages/public/BlogPost/BlogPost';
+import Donate from '../pages/public/Donate/Donate';
+import Join from '../pages/public/Join/Join';
 
 // Admin routes intentionally omitted for now.
 // Triple-tap + PIN gate + Dashboard get added after first deployment.
