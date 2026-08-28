@@ -34,7 +34,7 @@ export default function AppRoutes() {
         path="/admin"
         element={
           <ProtectedAdminRoute>
-            {/* <AdminDashboard /> */}
+            <AdminDashboard />
           </ProtectedAdminRoute>
         }
       />
