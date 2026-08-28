@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import styles from './Hero.module.css';
+import styles from './Home.module.css';
 
-export default function Hero() {
+export default function Home() {
   return (
     <section className={styles.hero}>
       {/* Candidate photo — placeholder until Cloudinary asset is wired in */}

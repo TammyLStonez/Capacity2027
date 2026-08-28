@@ -1,0 +1,25 @@
+/* ===========================================
+   Admin Panel — Theme Tokens
+   Distinct from the public site's tokens.css.
+   Scoped to .adminTheme so it never leaks into
+   public pages.
+   =========================================== */
+
+.adminTheme {
+  --admin-navy: #0B1F3A;
+  --admin-navy-2: #152B4E;
+  --admin-cream: #FAF5E9;
+  --admin-gold: #C9A227;
+  --admin-gold-dark: #8A6D14;
+  --admin-border: #E8DFC5;
+  --admin-text-muted: #7A7A72;
+  --admin-nav-text: #C7CBD6;
+  --admin-nav-text-dim: #8B93A4;
+  --admin-success-bg: #DCEFD9;
+  --admin-success-text: #2E6B2A;
+  --admin-draft-bg: #F1E4C4;
+  --admin-draft-text: #8A6D14;
+  --admin-danger: #B5473F;
+
+  font-family: var(--font-ui);
+}

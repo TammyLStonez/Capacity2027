@@ -1,0 +1,264 @@
+.notice {
+  font-size: 11px;
+  color: var(--admin-gold-dark);
+  background: rgba(201, 162, 39, 0.12);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--admin-text-muted);
+  margin-bottom: 14px;
+  max-width: 480px;
+}
+
+/* ---------- Stat cards ---------- */
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.statCard {
+  background: #fff;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.statLabel {
+  font-size: 10px;
+  color: var(--admin-gold-dark);
+  margin-bottom: 2px;
+}
+
+.statValue {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--admin-navy);
+  font-family: var(--font-display);
+}
+
+.miniCardRow {
+  display: flex;
+  gap: 10px;
+}
+
+.miniCard {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.miniCardValue {
+  font-size: 13px;
+  color: var(--admin-navy);
+}
+
+/* ---------- Section header ---------- */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 22px;
+}
+
+.sectionHeader:first-of-type {
+  margin-top: 0;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--admin-navy);
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--admin-gold);
+  color: var(--admin-navy);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  filter: brightness(1.05);
+}
+
+/* ---------- Table ---------- */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.table th {
+  text-align: left;
+  padding: 6px 0;
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--admin-gold-dark);
+}
+
+.actionsHeader {
+  text-align: right;
+}
+
+.table td {
+  padding: 9px 0;
+  color: var(--admin-navy);
+  border-top: 0.5px solid var(--admin-border);
+}
+
+.muted {
+  color: var(--admin-text-muted);
+}
+
+.rowActions {
+  text-align: right;
+}
+
+.statusPublished {
+  background: var(--admin-success-bg);
+  color: var(--admin-success-text);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.iconButton,
+.iconButtonDanger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.iconButton {
+  color: var(--admin-gold-dark);
+  margin-right: 6px;
+}
+
+.iconButtonDanger {
+  color: var(--admin-danger);
+}
+
+/* ---------- Pillar list (Manifesto) ---------- */
+
+.pillarList {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillarRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-top: 0.5px solid var(--admin-border);
+}
+
+.pillarRow:first-child {
+  border-top: none;
+}
+
+.pillarLetter {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--admin-gold);
+  width: 28px;
+}
+
+.pillarText {
+  flex: 1;
+}
+
+.pillarWord {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--admin-navy);
+}
+
+.pillarLine {
+  font-size: 11px;
+  color: var(--admin-text-muted);
+  margin-top: 2px;
+}
+
+/* ---------- Forms ---------- */
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 560px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--admin-navy);
+}
+
+.input,
+.textarea {
+  padding: 10px 12px;
+  font-size: 12px;
+  color: var(--admin-navy);
+  background: #fff;
+  border: 1px solid var(--admin-border);
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: 2px solid var(--admin-gold);
+  outline-offset: 1px;
+}
+
+/* ---------- Empty state ---------- */
+
+.emptyState {
+  font-size: 12px;
+  color: var(--admin-text-muted);
+  padding: 24px 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+  .statGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .table {
+    font-size: 11px;
+  }
+}

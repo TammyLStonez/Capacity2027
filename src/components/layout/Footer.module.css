@@ -6,18 +6,26 @@
   justify-content: space-between;
 }
 
-.footer__logo {
+.logo {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
+  text-decoration: none;
   color: var(--color-ink);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
 }
 
-.footer__logo span {
+.logo span {
   color: var(--color-gold);
 }
 
-.footer__note {
+.logo:active {
+  scale: 1.02;
+}
+
+.note {
   font-family: var(--font-ui);
   font-size: var(--text-caption);
   color: var(--color-bronze);

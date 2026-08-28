@@ -1,16 +1,14 @@
-import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes/AppRoutes';
 import './styles/fonts.css';
 import './styles/global.css';
-import Hero from './pages/public/Hero/Hero';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-
+import { AdminAuthProvider } from './context/AdminAuthContext';
+import PinGate from './components/admin/PinGate/PinGate.jsx';
 
 export default function App() {
   return (
-    <div>
+    <AdminAuthProvider>
       <AppRoutes />
-    </div>
+      <PinGate />
+    </AdminAuthProvider>
   );
 }

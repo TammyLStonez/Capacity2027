@@ -1,26 +1,43 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from '../components/layout/Layout';
-import Hero from '../pages/public/Hero/Hero';
-import About from '../pages/public/About/About';
-import Blog from '../pages/public/Blog/Blog';
-import BlogPost from '../pages/public/BlogPost/BlogPost';
-import Donate from '../pages/public/Donate/Donate';
-import Join from '../pages/public/Join/Join';
+import Layout from '../components/layout/Layout.jsx';
+import Home from '../pages/public/Home/Home.jsx';
+import About from '../pages/public/About/About.jsx';
+import Blog from '../pages/public/Blog/Blog.jsx';
+import BlogPost from '../pages/public/BlogPost/BlogPost.jsx';
+import Donate from '../pages/public/Donate/Donate.jsx';
+import Join from '../pages/public/Join/Join.jsx';
+//import Manifesto from '../pages/public/Manifesto/Manifesto.jsx';
+import AdminDashboard from '../pages/admin/AdminDashboard/AdminDashboard.jsx';
+import ProtectedAdminRoute from '../components/admin/ProtectedAdminRoute/ProtectedAdminRoute.jsx';
 
-// Admin routes intentionally omitted for now.
-// Triple-tap + PIN gate + Dashboard get added after first deployment.
+// Admin access: triple-tap the CAPACITY wordmark in the Footer to open the
+// PIN gate (see PinGate.jsx / AdminAuthContext.jsx). /admin itself is
+// guarded by ProtectedAdminRoute and bounces unauthenticated visitors home,
+// so the route isn't discoverable just by trying the URL. It's also kept
+// outside the public Layout (no campaign Navbar/Footer) since it's a
+// separate, internal surface.
 
 export default function AppRoutes() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Hero />} />
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        {/* <Route path="/manifesto" element={<Manifesto />} /> */}
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/join" element={<Join />} />
-      </Routes>
-    </Layout>
+      </Route>
+
+      <Route
+        path="/admin"
+        element={
+          <ProtectedAdminRoute>
+            {/* <AdminDashboard /> */}
+          </ProtectedAdminRoute>
+        }
+      />
+    </Routes>
   );
 }
